@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+  suresuccess.createsvc:
+    image: ${DOCKER_REGISTRY-}suresuccesscreatesvc
+    build:
+      context: .
+      dockerfile: SureSuccess.CreateSvc/Dockerfile
+
+  suresuccess.deletesvc:
+    image: ${DOCKER_REGISTRY-}suresuccessdeletesvc
+    build:
+      context: .
+      dockerfile: ../SureSuccess.DeleteSvc/Dockerfile
+
+
+  suresuccess.gateway:
+    image: ${DOCKER_REGISTRY-}suresuccessgateway
+    build:
+      context: .
+      dockerfile: SureSuccess.Gateway/Dockerfile
+
+
+  suresuccess.readsvc:
+    image: ${DOCKER_REGISTRY-}suresuccessreadsvc
+    build:
+      context: .
+      dockerfile: ../SureSuccess.ReadSvc/Dockerfile
+
+
+  suresuccess.ui:
+    image: ${DOCKER_REGISTRY-}suresuccessui
+    build:
+      context: .
+      dockerfile: SureSuccess.UI/Dockerfile
+
+
+  suresuccess.updatesvc:
+    image: ${DOCKER_REGISTRY-}suresuccessupdatesvc
+    build:
+      context: .
+      dockerfile: ../SureSuccess.UpdateSvc/Dockerfile
+

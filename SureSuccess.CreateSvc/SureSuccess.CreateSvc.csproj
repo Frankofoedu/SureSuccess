@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>81f682d8-79f7-45d1-aa1b-d8371f81eabb</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+	      <Content Include="$(SolutionDir)commonsettings.json" CopyToOutputDirectory="PreserveNewest" LinkBase="\" />
+	      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
+	        <PrivateAssets>all</PrivateAssets>
+	        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	      </PackageReference>
+	      <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
+
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SureSuccess.Shared\SureSuccess.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
